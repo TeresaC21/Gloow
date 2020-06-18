@@ -58,22 +58,20 @@ export function CategoriesDisplay() {
         }
     }
     return (
-        <div>
-            <div className="card-deck">
-                {randomCategories.map((el, index) => (
-                    <section className="card back" key={index}>
-                        <div className="card-body">
-                            <Link to={`/ProductsbyCategory/${el.categoryId}`} className={Style.container}>
-                                <img src={el.picture}  className="card-img-top" alt= {el.description} />
-                                 <div className={Style.overlay}>
-                              <div className={Style.text}>{"Go to " + el.description + " and see the products" }
-                              </div>
-                              </div>
-                            </Link>  
-                        </div>
-                    </section>
-                ))}
-            </div>
+        <div className="row">
+            {randomCategories.map((el, index) => (
+                <div className="card back col-md-6 col-lg-4" key={index}>
+                    <div className="card-body">
+                        <Link to={`/ProductsbyCategory/${el.categoryId}`} className={Style.containerCategory}>
+                            <img src={el.picture} className="card-img-top" alt={el.description} />
+                            <div className={Style.overlay}>
+                                <div className={Style.text}>{"Go to " + el.description + " and see the products"}
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                </div>
+            ))}
         </div>
     );
 }
