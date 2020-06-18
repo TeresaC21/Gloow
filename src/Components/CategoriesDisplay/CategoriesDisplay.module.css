@@ -1,4 +1,4 @@
-.container {
+.containerCategory {
   position: relative;
   display: block;
   }
@@ -15,7 +15,7 @@
     transition: .5s ease;
   }
 
-  .container:hover .overlay {
+  .containerCategory:hover .overlay {
     opacity: 1;
     position: absolute;
     background:rgba(0, 0, 0, 0.575) no-repeat center center fixed;
@@ -32,4 +32,8 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+  }
+
+  .cardwidth {
+    width: 18rem !important;
   }
